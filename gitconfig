@@ -1,0 +1,20 @@
+[user]
+    email = marcusanovak@gmail.com
+    name = heymoose
+[alias]
+    co = checkout
+    pf = push --force-with-lease
+    rc = rebase --continue
+    current-branch = rev-parse --abbrev-ref HEAD
+    rhu = "!git reset --hard origin/$(git current-branch)"
+    br = branch
+    merged = branch --merged
+    st = status
+    cm = commit -m
+    unstage = reset --soft HEAD^
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    p = push origin head -u
+    f = fetch
+[push]
+    default = simple
